@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Creative Register Page</title>
+</head>
+<link rel="stylesheet" href="CSS/register.css">
+<body>
+    <div class="wrapper2">
+
+        <div class="Register-box">
+          <form action="">
+            <h3>Register</h3>
+
+            <div class="input-box2">
+                <span class="icon">
+                  <ion-icon name="Username"></ion-icon>
+                </span>
+                <input type="text" maxlength="100" required>
+                <label>Username</label>
+              </div>
+
+            <div class="input-box2">
+              <span class="icon">
+                <ion-icon name="mail"></ion-icon>
+              </span>
+              <input type="email" required>
+              <label>Email ID</label>
+            </div>
+             
+            <div class="input-box2">
+                <span class="icon">
+                  <ion-icon name="Phno"></ion-icon>
+                </span>
+                <input type="num"  maxlength="10" onKeyPress="return numbersonly(event, false)" required>
+                <label>Phone Number</label>
+              </div>
+
+            <div class="input-box2">
+              <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+              </span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+      
+            <button type="submit">Register</button>
+      
+            <div class="Login-link">
+              <p>Don't have an account? <a href="index.html">Login</a></p>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+</body>
+</html>
+
+<script language="javascript">
+  function check(f)
+  {
+  
+  if(f.UserName.value.trim()=="")
+  {
+  alert("This Name field can not be empty");
+  f.UserName.focus();
+  return false ;
+  }
+  else if (f.Email.value.trim()=="" || checkemail(f.Email)==false)
+  {
+  alert("This Email ID field can not be empty");
+  f.Email.focus();
+  return false ;
+  }
+  else if (f.Phno.value.trim()=="" || checkmobile(f.Phno)==false)
+  {
+  alert("This Mobile field can not be empty");
+  f.Phno.focus();
+  return false ;
+  }
+  else
+  return true;
+  }
+  </script>
+  
+  <script type="text/javascript">
+  function check1() {
+       document.frm.submit()
+  }
+  </script>
+    
